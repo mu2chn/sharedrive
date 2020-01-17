@@ -1,30 +1,40 @@
-const Chromy = require('chromy');
-const chromy = new Chromy();
+const crawlDrive = require('./googleDrive');
 
-const fs = require('fs');
+// crawlDrive("https://drive.google.com/drive/folders/1--iD6S3z9YR4Y7_TJEg7mHOkoNU4uzts");
 
-async function screenshot() {
-    try {
-        await chromy.goto('https://drive.google.com/drive/folders/1--iD6S3z9YR4Y7_TJEg7mHOkoNU4uzts')
-        const png = await chromy.screenshotDocument()
-        fs.writeFileSync('out.png', png)
-        await chromy.close()
-    } catch (e) {
-        console.log(e);
-        chromy.close()
+function Crawl(url){
+    this.baseUrl = null;
+    this.crawler = null;
+    this.init(url);
+}
+
+Crawl.prototype = {
+    init(url){
+        this.baseUrl = this._$shorterUrl(url);
+        // クローラーのセット
+        const domain = this._$getDomain(this.baseUrl);
+        switch (domain){
+            case "drive.google.com":
+                this.crawler = crawlDrive;
+                break;
+            default:
+                break;
+        }
+    },
+
+    _$shorterUrl(url){
+        const regex = /https?:\/\/.*/;
+        if(url.match(regex)){
+            url = url.replace(/https?:\/\//, "");
+        }
+        return url;
+    },
+
+    _$getDomain(url){
+        this._$shorterUrl(url);
+        const splitUrl = url.split("/");
+        return splitUrl[0];
     }
-}
-// screenshot();
-function crawlDrive(){
-    chromy.chain()
-        .goto("https://drive.google.com/drive/folders/1--iD6S3z9YR4Y7_TJEg7mHOkoNU4uzts")
-        .wait(5000)
-        .evaluate(_ => {
-            return document.querySelectorAll(".Q5txwe");
-        })
-        .result(r => console.log(r))
-        .end()
-        .catch(e => console.log(e))
-        .then(_ => chromy.close());
-}
-crawlDrive();
+};
+
+module.exports = Crawl;
