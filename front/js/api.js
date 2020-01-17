@@ -2,10 +2,10 @@ const API = {
     sendInput(text) {
         const encoded = encodeURI(text);
         return fetch(`/search?search=${text}`)
-            .then((respnse) => {
-                if(respnse.ok){
-                    // console.log(respnse);
-                    return respnse.json()
+            .then((response) => {
+                if(response.ok){
+                    // console.log(response);
+                    return response.json()
                 }
                 else {
                     throw new Error()

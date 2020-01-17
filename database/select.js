@@ -13,7 +13,7 @@ const Select = {
         console.log(textArr);
         connectDB('inverted_index', (collection) => {
             collection.find({key: {$in: textArr}}).limit(20).toArray((err, doc) => {
-                console.log(doc);
+                // console.log(doc);
                 return doc
                 // callback(doc);
             });

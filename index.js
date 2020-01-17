@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const corpus = require('./crawl/corpus/ngram');
-const Select = require('./database/select');
+const connectDB = require('./database/db');
 
 /* 2. listen()メソッドを実行して3000番ポートで待ち受け。*/
 const server = app.listen(3000, function () {
@@ -13,10 +13,14 @@ app.get("/", (req, res, next) => {
     res.render("index", {})
 });
 
-app.get("/search", async (req, res, next) => {
+app.get("/search", (req, res, next) => {
     const search = req.query.search;
     const textList = corpus(search);
-    res.json(await Select.search(textList, res.json))
+    connectDB('inverted_index', (collection) => {
+        collection.find({key: {$in: textList}}).limit(20).toArray((err, doc) => {
+            res.json(doc)
+        });
+    })
 
     // res.json([{id: 1, url: "drive292"}, {id: 8, url: "cloud802"}]);
 });
