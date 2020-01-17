@@ -23,14 +23,14 @@ function crawlDrive(url, param, callback){
                     result.push({
                         url: "https://drive.google.com/drive/folders/"+folderKey,
                         type: "folder",
-                        param: param + [data["__incrementalDOMData"]["H"][1]]
+                        param: param.concat([data["__incrementalDOMData"]["H"][1]])
                     })
                 }
                 else {
                     result.push({
                         url: "https://drive.google.com/file/d/"+folderKey,
                         type: "file",
-                        param: param + [data["__incrementalDOMData"]["H"][1]]
+                        param:  param.concat([data["__incrementalDOMData"]["H"][1]])
                     })
                 }
             }

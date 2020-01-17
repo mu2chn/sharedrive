@@ -1,7 +1,9 @@
 const Crawl = require('./crawl');
+const corpus = require('./corpus/ngram');
+const Insert = require('../database/insert');
 
 const firstOP = [{
-    url: "https://drive.google.com/drive/folders/1--iD6S3z9YR4Y7_TJEg7mHOkoNU4uzts",
+    url: "https://drive.google.com/drive/folders/1-UkT9OuSsDfv32wCWAeDWW4A_PLFU1Jx",
     type: "folder",
     param: []
 }];
@@ -15,7 +17,22 @@ function recursionCrawl(option) {
             crawl.exec(recursionCrawl);
         }
         else {
-            console.log(op);
+            // console.log(op);
+            inverted(op)
         }
     }
+}
+
+function inverted(op) {
+    const param = op.param;
+    const url = op.url;
+
+    let separatedParam = [];
+
+    for(let text of param){
+        Array.prototype.push.apply(separatedParam, corpus(text))
+    }
+    // Insert.insertInverted(separatedParam, url);
+    console.log(separatedParam);
+    console.log(url);
 }
