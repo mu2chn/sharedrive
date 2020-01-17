@@ -1,5 +1,6 @@
 const Chromy = require('chromy');
 const chromy = new Chromy();
+const fetch = require('node-fetch');
 
 function crawlDrive(url, param, callback){
     chromy.chain()
@@ -8,15 +9,28 @@ function crawlDrive(url, param, callback){
         .evaluate(_ => {
             return document.querySelectorAll(".Q5txwe");
         })
-        .result(r => {
+        .result(async r => {
             const result = [];
             for(let key of Object.keys(r)){
                 const data = r[key]; //r[parseInt(key)];
                 const folderKey = data["__incrementalDOMData"]["key"].split(":").pop();
-                result.push({
-                    url: "https://drive.google.com/drive/folders/"+folderKey,
-                    param: param + [data["__incrementalDOMData"]["H"][1]]
-                })
+
+                const response = await fetch("https://drive.google.com/drive/folders/"+folderKey);
+
+                if(response.ok){
+                    result.push({
+                        url: "https://drive.google.com/drive/folders/"+folderKey,
+                        type: "folder",
+                        param: param + [data["__incrementalDOMData"]["H"][1]]
+                    })
+                }
+                else {
+                    result.push({
+                        url: "https://drive.google.com/file/d/"+folderKey,
+                        type: "file",
+                        param: param + [data["__incrementalDOMData"]["H"][1]]
+                    })
+                }
             }
             callback(result)
         })
