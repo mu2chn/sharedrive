@@ -22,10 +22,8 @@ Crawl.prototype = {
         }
     },
 
-    async exex(){
-        const result = await this.crawler("http://" + this.baseUrl);
-        console.log(result)
-        return result;
+    exex(callBack){
+        const result = this.crawler("http://" + this.baseUrl, callBack);
     },
 
     _$shorterUrl(url){
