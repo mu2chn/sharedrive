@@ -1,11 +1,14 @@
 const crawlDrive = require('./googleDrive');
 
-// crawlDrive("https://drive.google.com/drive/folders/1--iD6S3z9YR4Y7_TJEg7mHOkoNU4uzts");
-
-function Crawl(url){
+// option = {
+//     url: "https://drive.google.com/drive/folders/1--iD6S3z9YR4Y7_TJEg7mHOkoNU4uzts",
+//     param: ["information", "math"]
+// }
+function Crawl(option){
     this.baseUrl = null;
     this.crawler = null;
-    this.init(url);
+    this.param = option.param;
+    this.init(option.url);
 }
 
 Crawl.prototype = {
@@ -22,8 +25,8 @@ Crawl.prototype = {
         }
     },
 
-    exex(callBack){
-        const result = this.crawler("http://" + this.baseUrl, callBack);
+    exec(callBack){
+        const result = this.crawler("http://" + this.baseUrl, this.param, callBack);
     },
 
     _$shorterUrl(url){
