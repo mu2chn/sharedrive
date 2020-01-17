@@ -1,8 +1,10 @@
 const Chromy = require('chromy');
-const chromy = new Chromy();
 const fetch = require('node-fetch');
+// port 10000~10100 を使用
+let port = 0;
 
 function crawlDrive(url, param, callback){
+    const chromy = new Chromy({port: 10000 + (port++)%100});
     chromy.chain()
         .goto(url)
         .wait(8000)
@@ -32,7 +34,7 @@ function crawlDrive(url, param, callback){
                     })
                 }
             }
-            callback(result)
+            callback(result);
         })
         .end()
         .catch(e => console.log(e))
