@@ -16,7 +16,3 @@ app.get("/search", (req, res, next) => {
     console.log(search);
     res.json([{id: 1, url: "drive292"}, {id: 8, url: "cloud802"}]);
 });
-
-// app.get("/api/photo/list", function(req, res, next){
-//     res.json(photoList);
-// });
