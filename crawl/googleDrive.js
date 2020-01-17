@@ -8,7 +8,7 @@ function crawlDrive(url){
         .evaluate(_ => {
             return document.querySelectorAll(".Q5txwe");
         })
-        .result(r => console.log(r))
+        // .result(r => console.log(r))
         .end()
         .catch(e => console.log(e))
         .then(_ => chromy.close());

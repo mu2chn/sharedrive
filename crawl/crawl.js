@@ -22,6 +22,12 @@ Crawl.prototype = {
         }
     },
 
+    async exex(){
+        const result = await this.crawler("http://" + this.baseUrl);
+        console.log(result)
+        return result;
+    },
+
     _$shorterUrl(url){
         const regex = /https?:\/\/.*/;
         if(url.match(regex)){
