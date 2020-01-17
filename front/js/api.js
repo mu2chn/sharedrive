@@ -5,7 +5,7 @@ const API = {
             .then((respnse) => {
                 if(respnse.ok){
                     // console.log(respnse);
-                    return respnse
+                    return respnse.json()
                 }
                 else {
                     throw new Error()
