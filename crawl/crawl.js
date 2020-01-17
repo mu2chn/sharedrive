@@ -18,9 +18,9 @@ async function screenshot() {
 function crawlDrive(){
     chromy.chain()
         .goto("https://drive.google.com/drive/folders/1--iD6S3z9YR4Y7_TJEg7mHOkoNU4uzts")
+        .wait(5000)
         .evaluate(_ => {
-            // await sleep(10000);
-            return document.querySelectorAll('c-wiz')[0];
+            return document.querySelectorAll(".Q5txwe");
         })
         .result(r => console.log(r))
         .end()
