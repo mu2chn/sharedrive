@@ -15,13 +15,16 @@ async function screenshot() {
     }
 }
 // screenshot();
-
-chromy.chain()
-    .goto("https://drive.google.com/drive/folders/1--iD6S3z9YR4Y7_TJEg7mHOkoNU4uzts")
-    .evaluate(_ => {
-        return document.getElementsByTagName("c-wiz")
-    })
-    .result(r => console.log(r))
-    .end()
-    .catch(e => console.log(e))
-    .then(_ => chromy.close());
+function crawlDrive(){
+    chromy.chain()
+        .goto("https://drive.google.com/drive/folders/1--iD6S3z9YR4Y7_TJEg7mHOkoNU4uzts")
+        .evaluate(_ => {
+            // await sleep(10000);
+            return document.querySelectorAll('c-wiz')[0];
+        })
+        .result(r => console.log(r))
+        .end()
+        .catch(e => console.log(e))
+        .then(_ => chromy.close());
+}
+crawlDrive();
