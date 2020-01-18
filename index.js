@@ -40,14 +40,8 @@ app.get("/s", (req, res, next) => {
                 const find = [];
                 sort.map(d => find.push({url: d["_id"], title: d["title"]}));
                 res.render('search', {results: find});
-                console.log(find);
+                // console.log(find);
 
-                // const filter = [];
-                // sort.map(s => filter.push({}));
-                // collection.find({"url":{$in: find}}).limit(20).toArray((err, doc) => {
-                //     console.log(doc);
-                //     res.render('search', {results: doc})
-                // })
             });
     })
 });

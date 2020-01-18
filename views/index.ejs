@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SearchDrive</title>
+    <meta property="og:url" content="https://engine.face9363.net" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="過去問検索エンジン" />
+    <meta property="og:description" content="ーGoogleドライブなどにある京大の過去問をまとめて検索！" />
+    <meta property="og:image" content="https://engine.face9363.net/image.png" />
+    <meta property="og:site_name" content="Search Drive" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@face9363" />
+    <meta property="fb:app_id" content="641851759915847" />
+    <link rel="icon" href="/favicon.ico">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156486925-1"></script>
     <script>
@@ -16,10 +27,17 @@
     <script src="/js/main.js" type="module"></script>
 
     <style>
-        body{
-            /*background-image: url('/img/back.jpg');*/
-        }
+       .description{
+           width: 300px;
+           border-radius: 20px;
+           margin: auto;
+           padding: 1em;
+           /*background-color: #fff; */
+           border: 1px solid #ccc;
+       }
     </style>
+
+
 </head>
 <body>
 <div class="container" style="height: 100vh">
@@ -32,13 +50,17 @@
                 <div class="column is-full">
                     <h2 class="subtitle">過去問検索エンジン</h2>
                 </div>
-                <form method="get" action="/s" class="column">
+                <form method="get" action="/s" class="column is-full">
                     <div class="columns is-multiline" style="width: 50%; margin: auto">
                         <input class="input column is-full" type="text" name="search" placeholder="検索したい文字を入力"/>
-                        <input type="submit" value="GO!" class="is-half button is-primary" style="width: 150px; margin: auto; margin-top: 5px"/>
+                        <input type="submit" value="GO!" class="is-half button is-warning" style="width: 150px; margin: auto; margin-top: 5px"/>
                     </div>
                 </form>
+                <div class="description is-size-7" >
+                    <p>Googleドライブなどにある京大の過去問をまとめて検索できます。試験対策にご活用下さい。</p>
+                </div>
             </div>
+
         </div>
     </div>
 </div>
