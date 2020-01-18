@@ -10,7 +10,7 @@ function main() {
         text = `検索の結果が${len}件見つかりました。`
     }
     else {
-        text = "検索結果が20件を超えています。うまく見つからない場合はもう少し絞り込んで検索してみて下さい。"
+        text = "検索結果の表示は最大20件です。"
     }
     const searchTitle = document.querySelector('#search-title');
     const notify = document.querySelector('#notify');
