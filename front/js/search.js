@@ -1,9 +1,21 @@
 import API from "./api.js";
 function main() {
-    const targets = document.querySelectorAll(".results");
-    for(let t of targets){
-        setTitle(t)
+    const targets = document.querySelectorAll(".result-box");
+    const len = targets.length;
+    let text = "";
+    if(len===0){
+        text = "検索結果が見つかりませんでした。別のキーワードで調べてみて下さい。"
     }
+    else if (0< len && len < 20){
+        text = `検索の結果が${len}件見つかりました。`
+    }
+    else {
+        text = "検索結果が20件を超えています。うまく見つからない場合はもう少し絞り込んで検索してみて下さい。"
+    }
+    const searchTitle = document.querySelector('#search-title');
+    const notify = document.querySelector('#notify');
+    searchTitle.innerHTML = `${getQuery()["search"]}`;
+    notify.innerHTML = text;
 }
 
 async function setTitle(tag){
@@ -12,4 +24,11 @@ async function setTitle(tag){
     tag.innerHTML = title;
 }
 
-// main();
+function getQuery() {
+    const query = window.location.search.slice(1);
+    const queryObj = {};
+    query.split("&").map(o => queryObj[o.split("=")[0]] = decodeURI(o.split("=")[1]));
+    return queryObj;
+}
+
+main();
