@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SearchDrive</title>
+    <meta property="og:url" content="https://engine.face9363.net" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="過去問検索サイト" />
+    <meta property="og:description" content="　ー京大の定期試験の過去問をたくさんのGoogleドライブなどから一発で検索できます。" />
+    <meta property="og:image" content="https://engine.face9363.net/image.png" />
+    <meta property="og:site_name" content="Search Drive" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@face9363" />
+    <meta property="fb:app_id" content="641851759915847" />
+    <link rel="icon" href="/favicon.ico">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script src="https://kit.fontawesome.com/aef343bb28.js" crossorigin="anonymous"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156486925-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-156486925-1');
+    </script>
+    <script src="/js/detail.js" type="module"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <style>
+        .description{
+            width: 80%;
+            border-radius: 20px;
+            margin: 10px auto;
+            padding: 1em;
+            /*background-color: #fff; */
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+<div class="container" style="height: 100vh">
+    <div class="columns is-vcentered" style="height: 100%">
+        <div class="column">
+            <div class="columns  has-text-centered is-multiline is-centered is-mobile" style="height: 100%; margin-bottom: 200px">
+                <div class="column is-full">
+                    <h1 class="title web-font" style="margin-top: 100px">SearchDriveについて</h1>
+                </div>
+                <% if (post) {%>
+                    <div class="column is-half notification is-warning is-light" id="notify" style="margin-top: 5px">ご協力ありがとうございました！</div>
+                <% } %>
+                <div class="description is-size-7" >
+                    <p>Googleドライブなどにある京大の過去問をまとめて検索できるサイトです。過去問のあるドライブをクローリングすることにより、検索します。</p><br/>
+                    <p>検索（クローリング）してほしいドライブ等ございましたら以下より送信して下さい。（Googleドライブ以外でも大丈夫ですが、できなかったり、お時間をいただくことがございます。）</p><br/>
+                    <p>ウェブサイトや他のオンラインストレージサービスにつきましては、順次対応していきたいと思います。また、検索の精度につきましては少しずつ上げていきたいと思います。</p><br/>
+
+                    <form method="post" action="/detail" class="columns is-centered is-multiline">
+                        <div class="column is-full">
+                            <input class="input" type="text" placeholder="URLを入力" id="url-input" name="url">
+                        </div>
+                        <div class="column">
+                            <input type="submit" value="送信" class="button is-warning">
+                        </div>
+                    </form>
+
+                    <p>ご意見、ご要望は engine@e.face9363.net まで。</p>
+                </div>
+            </div>
+            <div class="" style="text-align: center">
+                <a href="/" class="button is-info">トップページへ</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

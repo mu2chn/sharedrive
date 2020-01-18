@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const orderStr = require('./database/order');
 const connectDB = require('./database/db');
+const bp = require('body-parser');
 
 const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, function () {
@@ -9,10 +10,22 @@ const server = app.listen(PORT, function () {
 });
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/front'));
+app.use(bp.urlencoded({ extended: false }));
 
 app.get("/", (req, res, next) => {
     res.render("index", {})
 });
+app.get("/detail", (req, res, next) => {
+    res.render("detail", {post: false})
+});
+app.post("/detail", (req, res, next) => {
+    const url = req.body.url;
+    connectDB('crawl_request', (collection)=> {
+        collection.insertOne({url: url});
+        res.render("detail", {post: true})
+    });
+});
+
 app.get("/s", (req, res, next) => {
     const search = req.query.search;
     const corpused = orderStr(search);

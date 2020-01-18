@@ -22,7 +22,14 @@ const API = {
                     throw new Error()
                 }
             })
-    }
+    },
+
+    // sendUrl(url){
+    //     return fetch("/crawl", {
+    //         method: "POST",
+    //         headers: {"Content-Type": "application/json; charset=utf-8",},
+    //     })
+    // }
 
 };
 
