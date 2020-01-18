@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "run": "node index.js",
-    "crawl": "node crawl/entry.js"
+    "crawl": "node crawl/entry.js",
+    "start": "node index.js"
   },
   "author": "face9363",
   "license": "ISC",

@@ -3,8 +3,8 @@ const app = express();
 const orderStr = require('./database/order');
 const connectDB = require('./database/db');
 
-/* 2. listen()メソッドを実行して3000番ポートで待ち受け。*/
-const server = app.listen(3000, function () {
+const PORT = process.env.PORT || 3000;
+const server = app.listen(PORT, function () {
     console.log("Node.js is listening to PORT:" + server.address().port);
 });
 app.set('view engine', 'ejs');

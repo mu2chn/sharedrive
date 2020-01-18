@@ -3,7 +3,7 @@ const corpus = require('./corpus/ngram');
 const Insert = require('../database/insert');
 
 const firstOP = [{
-    url: "https://drive.google.com/drive/folders/1-sdWCysMOpiNfJu-65-kQHwFhJcQ4zOk",
+    url: "https://drive.google.com/drive/folders/0B0IoxioeJoCeam1TbUUzSll5NGc",
     type: "folder",
     param: []
 }];

@@ -1,26 +1,32 @@
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SearchDrive</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script src="https://kit.fontawesome.com/aef343bb28.js" crossorigin="anonymous"></script>
 
     <script src="/js/search.js" type="module"></script>
 
     <style>
         .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            padding: 50px;
+        }
+        #result{
+            padding-left: 10px;
+            padding-top: 30px;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <div id="result">
+<div class="container" >
+    <h2 class="is-size-4">検索結果</h2>
+    <div id="result" class="columns is-multiline">
         <% for(let result of results){ %>
-            <div>
+            <div class="column is-full">
+                <i class="fab fa-google-drive">Googleドライブ</i>
                 <a class="results" href="<%= result.url %>"><%= result.title %></a>
             </div>
         <%} %>
