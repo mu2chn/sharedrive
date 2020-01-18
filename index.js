@@ -15,21 +15,24 @@ app.get("/", (req, res, next) => {
 });
 app.get("/s", (req, res, next) => {
     const search = req.query.search;
-    const textList = corpus(search);
+    const textList = [];
+    search.split(/ |　|,|、/).map(t => textList.push(...corpus(t)));
+    console.log(textList);
     connectDB('inverted_index', (collection) => {
         collection.find({key: {$in: textList}}).limit(20).toArray((err, doc) => {
             res.render('search', {results: doc})
         });
     })
 });
-app.get("/search", (req, res, next) => {
-    const search = req.query.search;
-    const textList = corpus(search);
-    connectDB('inverted_index', (collection) => {
-        collection.find({key: {$in: textList}}).limit(20).toArray((err, doc) => {
-            res.json(doc)
-        });
-    })
 
-    // res.json([{id: 1, url: "drive292"}, {id: 8, url: "cloud802"}]);
-});
+// app.get("/search", (req, res, next) => {
+//     const search = req.query.search;
+//     const textList = corpus(search);
+//     connectDB('inverted_index', (collection) => {
+//         collection.find({key: {$in: textList}}).limit(20).toArray((err, doc) => {
+//             res.json(doc)
+//         });
+//     })
+//
+//     // res.json([{id: 1, url: "drive292"}, {id: 8, url: "cloud802"}]);
+// });

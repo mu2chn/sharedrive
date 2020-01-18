@@ -3,18 +3,21 @@ const corpus = require('./corpus/ngram');
 const Insert = require('../database/insert');
 
 const firstOP = [{
-    url: "https://drive.google.com/drive/folders/1--iD6S3z9YR4Y7_TJEg7mHOkoNU4uzts",
+    url: "https://drive.google.com/drive/folders/1-sdWCysMOpiNfJu-65-kQHwFhJcQ4zOk",
     type: "folder",
     param: []
 }];
 
+let waitTime = 0;
 recursionCrawl(firstOP);
 
 function recursionCrawl(option) {
     for (let op of option){
         if (op.type==="folder"){
             const crawl = new Crawl(op);
-            crawl.exec(recursionCrawl);
+            setTimeout( () => {
+                crawl.exec(recursionCrawl);
+            }, 1000*(waitTime++))
         }
         else {
             // console.log(op);
