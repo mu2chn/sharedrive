@@ -30,9 +30,9 @@
 
     <style>
         .description{
-            width: 80%;
+            /*width: 80%;*/
             border-radius: 20px;
-            margin: 10px auto;
+            margin: 10px 10%;
             padding: 1em;
             /*background-color: #fff; */
             border: 1px solid #ccc;
@@ -50,10 +50,10 @@
                 <% if (post) {%>
                     <div class="column is-half notification is-warning is-light" id="notify" style="margin-top: 5px">ご協力ありがとうございました！</div>
                 <% } %>
-                <div class="description is-size-7" >
+                <div class="description is-size-7 column is-full" >
                     <p>Googleドライブなどにある京大の過去問をまとめて検索できるサイトです。過去問のあるドライブをクローリングすることにより、検索します。</p><br/>
                     <p>検索（クローリング）してほしいドライブ等ございましたら以下より送信して下さい。（Googleドライブ以外でも大丈夫ですが、できなかったり、お時間をいただくことがございます。）</p><br/>
-                    <p>ウェブサイトや他のオンラインストレージサービスにつきましては、順次対応していきたいと思います。また、検索の精度につきましては少しずつ上げていきたいと思います。</p><br/>
+                    <p>ウェブサイトや他のオンラインストレージサービスにつきましては、順次対応していきたいと思います。また、検索の精度につきましては少しずつ上げていきたいと思いますのでよろしくお願いいたします。</p><br/>
 
                     <form method="post" action="/detail" class="columns is-centered is-multiline">
                         <div class="column is-full">
@@ -66,9 +66,9 @@
 
                     <p>ご意見、ご要望は engine@e.face9363.net まで。</p>
                 </div>
-            </div>
-            <div class="" style="text-align: center">
-                <a href="/" class="button is-info">トップページへ</a>
+                <div class="column" style="text-align: center">
+                    <a href="/" class="button is-info">トップページへ</a>
+                </div>
             </div>
         </div>
     </div>
