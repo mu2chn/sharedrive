@@ -10,7 +10,20 @@ const API = {
                     throw new Error()
                 }
             })
+    },
+
+    getTitle(url){
+        return fetch(url)
+            .then(response => {
+                if(response.ok){
+                    return response.text().match(/<title>(.*)<\/title>/)[1]
+                }
+                else {
+                    throw new Error()
+                }
+            })
     }
+
 };
 
 export default API

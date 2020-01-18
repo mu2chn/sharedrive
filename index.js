@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const corpus = require('./crawl/corpus/ngram');
+const orderStr = require('./database/order');
 const connectDB = require('./database/db');
 
 /* 2. listen()メソッドを実行して3000番ポートで待ち受け。*/
@@ -15,15 +15,46 @@ app.get("/", (req, res, next) => {
 });
 app.get("/s", (req, res, next) => {
     const search = req.query.search;
-    const textList = [];
-    search.split(/ |　|,|、/).map(t => textList.push(...corpus(t)));
-    console.log(textList);
+    const corpused = orderStr(search);
+    const result = [];
+    corpused.map(c => result.push({"key":{ $in: c}}));
+
     connectDB('inverted_index', (collection) => {
-        collection.find({key: {$in: textList}}).limit(20).toArray((err, doc) => {
-            res.render('search', {results: doc})
-        });
+        collection
+            // .find({$or: result})
+            .aggregate([
+                {
+                    $match: {$or: result}
+                },
+                {
+                    $group: {
+                        _id: "$url",
+                        title: {$first: '$title'},
+                        count: { $sum: 1 }
+                    }
+                },
+                {
+                    $sort: {count: -1}
+                }])
+            .limit(20).toArray((err, sort) => {
+                const find = [];
+                sort.map(d => find.push({url: d["_id"], title: d["title"]}));
+                res.render('search', {results: find});
+                console.log(find);
+
+                // const filter = [];
+                // sort.map(s => filter.push({}));
+                // collection.find({"url":{$in: find}}).limit(20).toArray((err, doc) => {
+                //     console.log(doc);
+                //     res.render('search', {results: doc})
+                // })
+            });
     })
 });
+
+
+
+
 
 // app.get("/search", (req, res, next) => {
 //     const search = req.query.search;

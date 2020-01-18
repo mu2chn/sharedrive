@@ -5,7 +5,7 @@
     <title>SearchDrive</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
 
-    <script src="/js/main.js" type="module"></script>
+    <script src="/js/search.js" type="module"></script>
 
     <style>
         .container {
@@ -21,7 +21,7 @@
     <div id="result">
         <% for(let result of results){ %>
             <div>
-                <a href="<%= result.url %>"><%= result.title %></a>
+                <a class="results" href="<%= result.url %>"><%= result.title %></a>
             </div>
         <%} %>
     </div>
