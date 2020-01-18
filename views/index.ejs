@@ -8,22 +8,40 @@
     <script src="/js/main.js" type="module"></script>
 
     <style>
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        /*.container {*/
+        /*    display: flex;*/
+        /*    justify-content: center;*/
+        /*    align-items: center;*/
+        /*}*/
+
+        body{
+            /*background-image: url('/img/back.jpg');*/
         }
     </style>
 </head>
-<body>
+<body style="">
 
-<div class="columns is-centered">
-    <div class="column">
-        <form method="get" action="/s">
-            <input type="text" name="search" placeholder="検索したい文字を入力" />
-            <input type="submit" value="検索" />
-        </form>
+<div class="container" style="height: 100vh">
+    <div class="columns is-vcentered" style="height: 100%">
+        <div class="column">
+            <div class="columns  has-text-centered is-multiline" style="height: 100%">
+                <div class="column is-full">
+                    <h1 class="title">SerchDrive</h1>
+                </div>
+                <div class="column is-full">
+                    <h2 class="subtitle">過去問検索エンジン</h2>
+                </div>
+                <form method="get" action="/s" class="column">
+                    <div class="columns is-multiline" style="width: 50%; margin: auto">
+                        <input class="input column is-full" type="text" name="search" placeholder="検索したい文字を入力"/>
+                        <input type="submit" value="GO!" class="is-half button is-primary" style="width: 150px; margin: auto; margin-top: 5px"/>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
+
+
     <div hidden>
         <h1>Search Drive</h1>
 

@@ -12,4 +12,4 @@ async function setTitle(tag){
     tag.innerHTML = title;
 }
 
-main();
+// main();
