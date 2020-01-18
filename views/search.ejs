@@ -17,18 +17,13 @@
 </head>
 <body>
 
-<div class="columns is-centered">
-    <div class="column">
-        <form method="get" action="/s">
-            <input type="text" name="search" placeholder="検索したい文字を入力" />
-            <input type="submit" value="検索" />
-        </form>
-    </div>
-    <div hidden>
-        <h1>Search Drive</h1>
-
-        <input class="input" type="text" placeholder="Text input" id="search-box"/>
-        <button class="button" id="search-button">Click</button>
+<div class="container">
+    <div id="result">
+        <% for(let result of results){ %>
+            <div>
+                <a href="<%= result.url %>"><%= result.title %></a>
+            </div>
+        <%} %>
     </div>
 </div>
 

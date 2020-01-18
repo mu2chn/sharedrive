@@ -6,7 +6,7 @@ function main() {
 async function searchText(e){
     const text = document.querySelector("#search-box").value;
     const result = await API.sendInput(text);
-    console.log(result);
+    // console.log(result);
 }
 
 main();

@@ -9,10 +9,19 @@ const server = app.listen(3000, function () {
 });
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/front'));
+
 app.get("/", (req, res, next) => {
     res.render("index", {})
 });
-
+app.get("/s", (req, res, next) => {
+    const search = req.query.search;
+    const textList = corpus(search);
+    connectDB('inverted_index', (collection) => {
+        collection.find({key: {$in: textList}}).limit(20).toArray((err, doc) => {
+            res.render('search', {results: doc})
+        });
+    })
+});
 app.get("/search", (req, res, next) => {
     const search = req.query.search;
     const textList = corpus(search);
