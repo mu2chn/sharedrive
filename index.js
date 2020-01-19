@@ -32,6 +32,10 @@ app.get("/s", (req, res, next) => {
     const result = [];
     corpused.map(c => result.push({"key":{ $in: c}}));
 
+    connectDB('search_log', (collection) => {
+       collection.insertOne({query: search});
+    });
+
     connectDB('inverted_index', (collection) => {
         collection
             // .find({$or: result})
