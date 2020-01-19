@@ -3,7 +3,7 @@ const corpus = require('./corpus/ngram');
 const Insert = require('../database/insert');
 
 const firstOP = [{
-    url: "https://drive.google.com/drive/folders/0B7IMswEObnAUYi1VUm9ZOFJqZzQ",
+    url: "https://drive.google.com/drive/folders/1ImjPPtHtVUmGRDBEunOtBF2ZlcIRnSj_",
     type: "folder",
     param: []
 }];
@@ -29,7 +29,7 @@ function recursionCrawl(option) {
 function inverted(op) {
     const param = op.param;
     const url = op.url;
-    const title = op.param.join(" ")
+    const title = op.param.join(" ");
 
     let separatedParam = [];
 
