@@ -8,12 +8,11 @@ const firstOP = [{
     type: "folder",
     param: []
 }];
-
+firstOP[0].rootUrl = firstOP[0].url;
 let waitTime = 0;
 recursionCrawl(firstOP);
 
 function recursionCrawl(option) {
-    option.rootUrl = option.url;
     for (let op of option){
         if (op.type==="folder"){
             const crawl = new Crawl(op);
@@ -32,6 +31,7 @@ function inverted(op) {
     const param = Util.delDuplicated(op.param);
     const url = op.url;
     const title = param.join(" ");
+    const rootUrl = op.rootUrl;
 
 
     let separatedParam = [];
@@ -39,7 +39,7 @@ function inverted(op) {
     for(let text of param){
         Array.prototype.push.apply(separatedParam, corpus(text))
     }
-    Insert.insertInverted(separatedParam, url, title);
+    Insert.insertInverted(separatedParam, url, title, rootUrl);
     // console.log(separatedParam);
     // console.log(url);
 }

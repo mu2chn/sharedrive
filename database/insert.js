@@ -1,9 +1,9 @@
 const connectDB = require('./db');
 
 const Insert = {
-    insertInverted(keyList, url, title) {
+    insertInverted(keyList, url, title, rootUrl) {
         const arr = [];
-        keyList.map(k => arr.push({key: k, url: url, title: title}));
+        keyList.map(k => arr.push({key: k, url: url, title: title, rootUrl: rootUrl}));
         connectDB("inverted_index2", (collection) => {
             collection.insertMany(arr)
         })

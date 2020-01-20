@@ -8,6 +8,7 @@ function Crawl(option){
     this.baseUrl = null;
     this.crawler = null;
     this.param = option.param;
+    this.rootUrl = option.rootUrl;
     this.init(option.url);
 }
 
