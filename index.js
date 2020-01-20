@@ -29,19 +29,18 @@ app.post("/detail", (req, res, next) => {
 app.get("/s", (req, res, next) => {
     const search = req.query.search;
     const corpused = orderStr(search);
-    const result = [];
-    corpused.map(c => result.push({"key":{ $in: c}}));
+    const result = corpused.map(c => {return {"key":{ $in: c}}});
 
     connectDB('search_log', (collection) => {
        collection.insertOne({query: search, date: new Date().toString()});
     });
 
-    connectDB('inverted_index', (collection) => {
+    connectDB('inverted_index3', (collection) => {
         collection
             // .find({$or: result})
             .aggregate([
                 {
-                    $match: {$or: result}
+                    $match: {$or:result}
                 },
                 {
                     $group: {

@@ -11,7 +11,7 @@ const Select = {
 
     search(textArr, callback){
         console.log(textArr);
-        connectDB('inverted_index', (collection) => {
+        connectDB('inverted_index3', (collection) => {
             collection.find({key: {$in: textArr}}).limit(20).toArray((err, doc) => {
                 // console.log(doc);
                 return doc
