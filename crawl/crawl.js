@@ -26,7 +26,7 @@ Crawl.prototype = {
     },
 
     exec(callBack){
-        const result = this.crawler("http://" + this.baseUrl, this.param, callBack);
+        const result = this.crawler("http://" + this.baseUrl, this.param, this.rootUrl, callBack);
     },
 
     _$shorterUrl(url){
@@ -41,7 +41,9 @@ Crawl.prototype = {
         this._$shorterUrl(url);
         const splitUrl = url.split("/");
         return splitUrl[0];
-    }
+    },
+
+
 };
 
 module.exports = Crawl;

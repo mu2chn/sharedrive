@@ -1,9 +1,10 @@
 const Crawl = require('./crawl');
 const corpus = require('./corpus/ngram');
 const Insert = require('../database/insert');
+const Util = require('./util');
 
 const firstOP = [{
-    url: "https://drive.google.com/drive/folders/1z7vIicim00c2jt8adfRLiLFFWxMZzj7h",
+    url: "https://drive.google.com/drive/u/0/folders/1qM0a4CrHwB_xXh2k9gg1EZH76CoenOp9",
     type: "folder",
     param: []
 }];
@@ -12,6 +13,7 @@ let waitTime = 0;
 recursionCrawl(firstOP);
 
 function recursionCrawl(option) {
+    option.rootUrl = option.url;
     for (let op of option){
         if (op.type==="folder"){
             const crawl = new Crawl(op);
@@ -27,9 +29,10 @@ function recursionCrawl(option) {
 }
 
 function inverted(op) {
-    const param = op.param;
+    const param = Util.delDuplicated(op.param);
     const url = op.url;
-    const title = op.param.join(" ");
+    const title = param.join(" ");
+
 
     let separatedParam = [];
 

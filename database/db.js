@@ -16,6 +16,7 @@ function connectDB(name, callback){
         // collection.find().toArray((err, doc) => {
         //     console.log(doc)
         // });
+        console.log(err);
         client.close();
     });
 }
