@@ -33,7 +33,7 @@ app.get("/s", (req, res, next) => {
     corpused.map(c => result.push({"key":{ $in: c}}));
 
     connectDB('search_log', (collection) => {
-       collection.insertOne({query: search});
+       collection.insertOne({query: search, date: new Date().toString()});
     });
 
     connectDB('inverted_index', (collection) => {

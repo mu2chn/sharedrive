@@ -4,7 +4,7 @@ const Insert = require('../database/insert');
 const Util = require('./util');
 
 const firstOP = [{
-    url: "https://drive.google.com/drive/u/0/folders/1qM0a4CrHwB_xXh2k9gg1EZH76CoenOp9",
+    url: "https://drive.google.com/drive/folders/0B0IoxioeJoCeam1TbUUzSll5NGc",
     type: "folder",
     param: []
 }];
@@ -27,7 +27,7 @@ function recursionCrawl(option) {
     }
 }
 
-function inverted(op) {
+async function inverted(op) {
     const param = Util.delDuplicated(op.param);
     const url = op.url;
     const title = param.join(" ");
@@ -35,11 +35,9 @@ function inverted(op) {
 
 
     let separatedParam = [];
-
     for(let text of param){
-        Array.prototype.push.apply(separatedParam, corpus(text))
+        const txt = await corpus(text);
+        Array.prototype.push.apply(separatedParam, txt)
     }
     Insert.insertInverted(separatedParam, url, title, rootUrl);
-    // console.log(separatedParam);
-    // console.log(url);
 }
