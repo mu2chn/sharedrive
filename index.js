@@ -25,6 +25,12 @@ app.post("/detail", (req, res, next) => {
         res.render("detail", {post: true})
     });
 });
+app.get("/clicked", (req, res, next) => {
+    const url = req.query.url;
+    connectDB('clicked_log', (collection) => {
+        collection.insertOne({url: url, date: new Date().toString()})
+    })
+});
 
 app.get("/s", (req, res, next) => {
     const search = req.query.search;

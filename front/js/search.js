@@ -1,5 +1,6 @@
 import API from "./api.js";
 function main() {
+    sendLog();
     const targets = document.querySelectorAll(".result-box");
     const len = targets.length;
     let text = "";
@@ -18,17 +19,21 @@ function main() {
     notify.innerHTML = text;
 }
 
-async function setTitle(tag){
-    const url = tag.getAttribute("href");
-    const title = await API.getTitle(url);
-    tag.innerHTML = title;
-}
-
 function getQuery() {
     const query = window.location.search.slice(1);
     const queryObj = {};
     query.split("&").map(o => queryObj[o.split("=")[0]] = decodeURI(o.split("=")[1]));
     return queryObj;
+}
+
+function sendLog(){
+    const resultA = document.querySelectorAll('.results');
+    for (let a of resultA) {
+        a.addEventListener("click", () => {
+            const href = a.getAttribute('href');
+            API.sendUrl(href);
+        })
+    }
 }
 
 main();

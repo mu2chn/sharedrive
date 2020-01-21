@@ -24,13 +24,11 @@ const API = {
             })
     },
 
-    // sendUrl(url){
-    //     return fetch("/crawl", {
-    //         method: "POST",
-    //         headers: {"Content-Type": "application/json; charset=utf-8",},
-    //     })
-    // }
-
+    sendUrl(url){
+        return fetch(`/clicked?url=${encodeURI(url)}`)
+            .then(response => console.log(response))
+            .catch(reason => console.log(reason))
+        }
 };
 
 export default API
