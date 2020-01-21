@@ -5,17 +5,10 @@ const URI = "mongodb+srv://fuse:NKJztfE9EJscJIGF@searchdrive-uff1m.mongodb.net/s
 
 function connectDB(name, callback){
     const client = new MongoClient(URI, { useNewUrlParser: true });
-    client.connect(err => {
-        const collection = client.db("search_url").collection(name);
-        callback(collection);
+    client.connect( async err => {
+        const  collection = client.db("search_url").collection(name);
+        await callback(collection);
 
-        // collection.insertOne({
-        //     url: "https://drive.google.com/drive/folders/1808AMUpxcwwA0CM15AWgzvRIWw6gZS3_"
-        // });
-
-        // collection.find().toArray((err, doc) => {
-        //     console.log(doc)
-        // });
         console.log(err);
         client.close();
     });

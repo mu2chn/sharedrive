@@ -46,12 +46,14 @@ app.get("/s", (req, res, next) => {
                     $group: {
                         _id: "$url",
                         title: {$first: '$title'},
+                        year: {$first: '$year'},
                         count: { $sum: 1 }
                     }
                 },
                 {
-                    $sort: {count: -1}
-                }])
+                    $sort: {count: -1, year: -1}
+                },
+            ])
             .limit(20).toArray((err, sort) => {
                 const find = [];
                 sort.map(d => find.push({url: d["_id"], title: d["title"]}));
