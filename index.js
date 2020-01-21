@@ -57,6 +57,10 @@ app.get("/s", (req, res, next) => {
             .limit(20).toArray((err, sort) => {
                 const find = [];
                 sort.map(d => find.push({url: d["_id"], title: d["title"]}));
+                const regExp  = new RegExp("[^ ]*[更新用|ください][^ ]*", 'g');
+                find.map(r => {
+                    r.title = r.title.replace(regExp, " ")
+                });
                 res.render('search', {results: find});
                 // console.log(find);
 
