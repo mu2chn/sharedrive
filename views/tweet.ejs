@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SearchDrive</title>
+    <meta property="og:url" content="https://engine.face9363.net" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="過去問検索サイト" />
+    <meta property="og:description" content="　ー京大の定期試験の過去問をたくさんのGoogleドライブなどから一発で検索できます。" />
+    <meta property="og:image" content="https://engine.face9363.net/image.png" />
+    <meta property="og:site_name" content="Search Drive" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@face9363" />
+    <meta property="fb:app_id" content="641851759915847" />
+    <link rel="icon" href="/favicon.ico">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script src="https://kit.fontawesome.com/aef343bb28.js" crossorigin="anonymous"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156486925-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-156486925-1');
+    </script>
+    <script src="/js/tweet.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <style>
+        .description{
+            /*width: 80%;*/
+            border-radius: 20px;
+            margin: 10px 10%;
+            padding: 1em;
+            /*background-color: #fff; */
+            border: 1px solid #ccc;
+        }
+        #loading{
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 5;
+            width: 100vw;
+            height: 100vh;
+            background-color: #ffffff;
+        }
+        .loadingImg{
+            z-index: 10;
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            left: calc(50% - 50px);
+            top: calc(50% - 50px);
+        }
+    </style>
+</head>
+<body>
+<a class="twitter-share-button" href="" data-size="large" id="tweet" hidden></a>
+<div id="loading"><img class="loadingImg" src="/img/loading.gif"></div>
+<div class="container" style="height: 100vh">
+    <div class="columns is-vcentered" style="height: 100%">
+        <div class="column">
+            <div class="columns  has-text-centered is-multiline is-centered is-mobile" style="height: 100%; margin-bottom: 200px">
+                <div class="column is-full">
+                    <h1 class="title web-font" style="margin-top: 100px">TweetDrive機能について</h1>
+                </div>
+                <div class="description is-size-6 column is-full" style="line-height: 2">
+                    メンションまたはリプライ（@ku_search）でTwitterに過去問を簡単に投稿できます。「自分の解けた問題などを解法とともにアップする」、「一個下の同学科の後輩に向けて投稿する」、など過去問に関する投稿であれば何でも歓迎です！<br/>
+
+                    当サイトではツイートに対するリンク（<a href="https://twitter.com/ku_search/status/1221380090493161472?s=20">こんな感じ</a>）を表示します。そのため過去問をご覧になられた方は「いいね！」等で感謝の気持ちを示しましょう！<br/>
+
+                    また、このサイトのすべてのリンクからのツイートはリプライ扱いとなり、他の人のTLには表示されないので気軽に投稿できます。<br/>
+
+                    もしよろしければ以下より、投稿してみてください。（反映にはお時間いただくことがございます）<br/>
+                    <span class="is-size-7">※画像のアップにはimgurを用いております。</span>
+                    <div class="field" >
+                        <div class="file is-info is-small">
+                            <label class="file-label" style="margin:1em auto">
+                                <input accept="image/*" type="file" class="tweet file-input"/>
+                                <span class="file-cta">
+                                <span class="file-icon">
+                                  <i class="fas fa-upload"></i>
+                                </span>
+                                <span class="file-label">
+                                  画像を選択して投稿
+                                </span>
+                              </span>
+                            </label>
+                        </div>
+                    </div>
+                    <p>ご意見、ご要望は engine@e.face9363.net まで。</p>
+                </div>
+                <div class="column" style="text-align: center">
+                    <a href="/" class="button is-secondary">トップページへ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

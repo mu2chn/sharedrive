@@ -4,55 +4,111 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SearchDrive</title>
-    <meta property="og:url" content="https://engine.face9363.net" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="過去問検索サイト" />
-    <meta property="og:description" content="　ー京大の定期試験の過去問をたくさんのGoogleドライブなどから一発で検索できます。" />
-    <meta property="og:image" content="https://engine.face9363.net/image.png" />
-    <meta property="og:site_name" content="Search Drive" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@face9363" />
-    <meta property="fb:app_id" content="641851759915847" />
+    <meta property="og:url" content="https://engine.face9363.net"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="過去問検索サイト"/>
+    <meta property="og:description" content="　ー京大の定期試験の過去問をたくさんのGoogleドライブなどから一発で検索できます。"/>
+    <meta property="og:image" content="https://engine.face9363.net/image.png"/>
+    <meta property="og:site_name" content="Search Drive"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@face9363"/>
+    <meta property="fb:app_id" content="641851759915847"/>
     <link rel="icon" href="/favicon.ico">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <script src="https://kit.fontawesome.com/aef343bb28.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156486925-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
         gtag('config', 'UA-156486925-1');
     </script>
-    <script src="/js/main.js" type="module"></script>
+    <script src="/js/tweet.js" type="module"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 
     <style>
-       .description{
-           width: 320px;
-           border-radius: 20px;
-           margin: 10px auto;
-           padding: 1em;
-           /*background-color: #fff; */
-           border: 1px solid #ccc;
-       }
-        .share-button{
+        .description {
+            width: 320px;
+            border-radius: 20px;
+            margin: 10px auto;
+            padding: 1em;
+            /*background-color: #fff; */
+            border: 1px solid #ccc;
+        }
+
+        .share-button {
             height: 15px;
             width: 50px;
         }
-        .web-font{
+
+        .web-font {
             font-family: 'Open Sans', sans-serif;
+        }
+        #loading{
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 5;
+            width: 100vw;
+            height: 100vh;
+            background-color: #ffffff;
+        }
+        .loadingImg{
+            z-index: 10;
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            left: calc(50% - 50px);
+            top: calc(50% - 50px);
         }
     </style>
 
 
 </head>
 <body>
+<a class="twitter-share-button" href="" data-size="large" id="tweet" hidden></a>
+<div id="loading"><img class="loadingImg" src="/img/loading.gif"></div>
 <div class="container" style="height: 100vh">
 
     <div class="columns is-vcentered" style="height: 90%">
+
+
         <div class="column">
+            <div class="notification is-info column">
+
+                <p>
+                    @ku_searchに過去問をツイートしよう</p>
+                <p class="is-size-7">
+                    リプライまたはメンションでツイッターに投稿するとその投稿が検索に表示されるようになります！ 詳しくは<a href="/tweet">こちら</a>
+                </p>
+                <div>
+                    <div class="field">
+                        <div class="file is-light is-small">
+                            <label class="file-label">
+                                <input accept="image/*" type="file" class="tweet file-input"/>
+                                <span class="file-cta">
+                                <span class="file-icon">
+                                  <i class="fas fa-upload"></i>
+                                </span>
+                                <span class="file-label">
+                                  画像を選択して投稿
+                                </span>
+                              </span>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
             <div class="columns  has-text-centered is-multiline" style="height: 100%; margin-bottom: 200px">
                 <div class="column is-full">
                     <h1 class="title web-font" style="margin-top: 100px">SearchDrive</h1>
@@ -63,16 +119,12 @@
                 <form method="get" action="/s" class="column is-full">
                     <div class="columns is-multiline" style="width: 50%; margin: auto">
                         <input class="input column is-full" type="text" name="search" placeholder="検索したい文字を入力"/>
-                        <input type="submit" value="GO!" class="is-half button is-warning" style="width: 150px; margin: auto; margin-top: 5px"/>
+                        <input type="submit" value="GO!" class="is-half button is-warning"
+                               style="width: 150px; margin: auto; margin-top: 5px"/>
                     </div>
                 </form>
-                <div class="description is-size-7" >
-                    <p>Googleドライブなどにある京大の過去問をまとめて検索できます。</p>
-                    <p>
-                        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw&text=過去問検索サイトです。京大の過去問をたくさんのドライブの中から一発で検索できます。&amp;url=https://engine.face9363.net" class="button is-small is-info share-button twitter-share-button" data-url="https://engine.face9363.net" data-show-count="false"><i class="fab fa-twitter"></i>Tweet</a>
-                        <span>してくれたらすごく嬉しいです。</span>
-                    </p>
-                    <p>詳細や検索登録については<a href="/detail">こちら</a>をご覧ください。</p>
+                <div class="description is-size-7">
+                    <p>Googleドライブなどにある京大の過去問をまとめて検索できます。詳細は<a href="/detail">こちら</a>へ。</p>
                 </div>
 
             </div>

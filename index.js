@@ -18,6 +18,9 @@ app.get("/", (req, res, next) => {
 app.get("/detail", (req, res, next) => {
     res.render("detail", {post: false})
 });
+app.get("/tweet", (req, res, next) => {
+    res.render("tweet", {post: false})
+});
 app.post("/detail", (req, res, next) => {
     const url = req.body.url;
     connectDB('crawl_request', (collection)=> {
