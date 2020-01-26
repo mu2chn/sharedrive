@@ -1,0 +1,627 @@
+{
+    "dates": [{
+        "date": "1 24, 2020",
+        "hasGoal": false,
+        "hasRevenue": false,
+        "sessionCount": 4,
+        "sessions": [{
+            "duration": "00 分 00 秒",
+            "deviceCategory": "mobile",
+            "channel": "Social",
+            "activitySummary": {
+                "PAGEVIEW": "1"
+            },
+            "activities": [{
+                "time": "5:53 午後",
+                "type": "PAGEVIEW",
+                "repeatActivityTimes": [],
+                "details": [{
+                    "ページのタイトル": ["SearchDrive"],
+                    "ページの URL": ["/"]
+                }],
+                "pageTitle": "SearchDrive"
+            }]
+        }, {
+            "duration": "00 分 00 秒",
+            "deviceCategory": "mobile",
+            "channel": "Social",
+            "activitySummary": {
+                "PAGEVIEW": "1"
+            },
+            "activities": [{
+                "time": "4:12 午後",
+                "type": "PAGEVIEW",
+                "repeatActivityTimes": [],
+                "details": [{
+                    "ページのタイトル": ["SearchDrive"],
+                    "ページの URL": ["/"]
+                }],
+                "pageTitle": "SearchDrive"
+            }]
+        }, {
+            "duration": "00 分 00 秒",
+            "deviceCategory": "mobile",
+            "channel": "Social",
+            "activitySummary": {
+                "PAGEVIEW": "1"
+            },
+            "activities": [{
+                "time": "2:38 午後",
+                "type": "PAGEVIEW",
+                "repeatActivityTimes": [],
+                "details": [{
+                    "ページのタイトル": ["SearchDrive"],
+                    "ページの URL": ["/"]
+                }],
+                "pageTitle": "SearchDrive"
+            }]
+        }, {
+            "duration": "00 分 00 秒",
+            "deviceCategory": "mobile",
+            "channel": "Social",
+            "activitySummary": {
+                "PAGEVIEW": "1"
+            },
+            "activities": [{
+                "time": "9:32 午前",
+                "type": "PAGEVIEW",
+                "repeatActivityTimes": [],
+                "details": [{
+                    "ページのタイトル": ["SearchDrive"],
+                    "ページの URL": ["/"]
+                }],
+                "pageTitle": "SearchDrive"
+            }]
+        }]
+    }, {
+        "date": "1 23, 2020",
+        "hasGoal": false,
+        "hasRevenue": false,
+        "sessionCount": 9,
+        "sessions": [{
+            "duration": "00 分 00 秒",
+            "deviceCategory": "mobile",
+            "channel": "Social",
+            "activitySummary": {
+                "PAGEVIEW": "1"
+            },
+            "activities": [{
+                "time": "10:19 午後",
+                "type": "PAGEVIEW",
+                "repeatActivityTimes": [],
+                "details": [{
+                    "ページのタイトル": ["SearchDrive"],
+                    "ページの URL": ["/"]
+                }],
+                "pageTitle": "SearchDrive"
+            }]
+        }, {
+            "duration": "00 分 00 秒",
+            "deviceCategory": "mobile",
+            "channel": "Social",
+            "activitySummary": {
+                "PAGEVIEW": "1"
+            },
+            "activities": [{
+                "time": "9:06 午後",
+                "type": "PAGEVIEW",
+                "repeatActivityTimes": [],
+                "details": [{
+                    "ページのタイトル": ["SearchDrive"],
+                    "ページの URL": ["/"]
+                }],
+                "pageTitle": "SearchDrive"
+            }]
+        }, {
+            "duration": "00 分 00 秒",
+            "deviceCategory": "mobile",
+            "channel": "Social",
+            "activitySummary": {
+                "PAGEVIEW": "1"
+            },
+            "activities": [{
+                "time": "8:35 午後",
+                "type": "PAGEVIEW",
+                "repeatActivityTimes": [],
+                "details": [{
+                    "ページのタイトル": ["SearchDrive"],
+                    "ページの URL": ["/"]
+                }],
+                "pageTitle": "SearchDrive"
+            }]
+        }, {
+            "duration": "00 分 00 秒",
+            "deviceCategory": "mobile",
+            "channel": "Social",
+            "activitySummary": {
+                "PAGEVIEW": "1"
+            },
+            "activities": [{
+                "time": "7:31 午後",
+                "type": "PAGEVIEW",
+                "repeatActivityTimes": [],
+                "details": [{
+                    "ページのタイトル": ["SearchDrive"],
+                    "ページの URL": ["/"]
+                }],
+                "pageTitle": "SearchDrive"
+            }]
+        }, {
+            "duration": "09 分 31 秒",
+            "deviceCategory": "mobile",
+            "channel": "Social",
+            "activitySummary": {
+                "PAGEVIEW": "2"
+            },
+            "activities": [{
+                "time": "6:53 午後",
+                "type": "PAGEVIEW",
+                "repeatActivityTimes": [],
+                "details": [{
+                    "ページのタイトル": ["SearchDrive"],
+                    "ページの URL": ["/"]
+                }],
+                "pageTitle": "SearchDrive"
+            }, {
+                "time": "6:43 午後",
+                "type": "PAGEVIEW",
+                "repeatActivityTimes": [],
+                "details": [{
+                    "ページのタイトル": ["SearchDrive"],
+                    "ページの URL": ["/"]
+                }],
+                "pageTitle": "SearchDrive"
+            }]
+        }, {
+            "duration": "00 分 00 秒",
+            "deviceCategory": "mobile",
+            "channel": "Social",
+            "activitySummary": {
+                "PAGEVIEW": "1"
+            },
+            "activities": [{
+                "time": "11:06 午前",
+                "type": "PAGEVIEW",
+                "repeatActivityTimes": [],
+                "details": [{
+                    "ページのタイトル": ["SearchDrive"],
+                    "ページの URL": ["/"]
+                }],
+                "pageTitle": "SearchDrive"
+            }]
+        }, {
+            "duration": "00 分 00 秒",
+            "deviceCategory": "mobile",
+            "channel": "Social",
+            "activitySummary": {
+                "PAGEVIEW": "1"
+            },
+            "activities": [{
+                "time": "10:20 午前",
+                "type": "PAGEVIEW",
+                "repeatActivityTimes": [],
+                "details": [{
+                    "ページのタイトル": ["SearchDrive"],
+                    "ページの URL": ["/"]
+                }],
+                "pageTitle": "SearchDrive"
+            }]
+        }, {
+            "duration": "02 分 28 秒",
+            "deviceCategory": "mobile",
+            "channel": "Social",
+            "activitySummary": {
+                "PAGEVIEW": "2"
+            },
+            "activities": [{
+                "time": "9:26 午前",
+                "type": "PAGEVIEW",
+                "repeatActivityTimes": [],
+                "details": [{
+                    "ページのタイトル": ["SearchDrive"],
+                    "ページの URL": ["/"]
+                }],
+                "pageTitle": "SearchDrive"
+            }, {
+                "time": "9:24 午前",
+                "type": "PAGEVIEW",
+                "repeatActivityTimes": [],
+                "details": [{
+                    "ページのタイトル": ["SearchDrive"],
+                    "ページの URL": ["/"]
+                }],
+                "pageTitle": "SearchDrive"
+            }]
+        }, {
+            "duration": "00 分 00 秒",
+            "deviceCategory": "mobile",
+            "channel": "Social",
+            "activitySummary": {
+                "PAGEVIEW": "1"
+            },
+            "activities": [{
+                "time": "8:46 午前",
+                "type": "PAGEVIEW",
+                "repeatActivityTimes": [],
+                "details": [{
+                    "ページのタイトル": ["SearchDrive"],
+                    "ページの URL": ["/"]
+                }],
+                "pageTitle": "SearchDrive"
+            }]
+        }]
+    }, {
+        "date": "1 22, 2020",
+        "hasGoal": false,
+        "hasRevenue": false,
+        "sessionCount": 8,
+        "sessions": [{
+            "duration": "00 分 00 秒",
+            "deviceCategory": "mobile",
+            "channel": "Social",
+            "activitySummary": {
+                "PAGEVIEW": "1"
+            },
+            "activities": [{
+                "time": "11:31 午後",
+                "type": "PAGEVIEW",
+                "repeatActivityTimes": [],
+                "details": [{
+                    "ページのタイトル": ["SearchDrive"],
+                    "ページの URL": ["/"]
+                }],
+                "pageTitle": "SearchDrive"
+            }]
+        }, {
+            "duration": "00 分 00 秒",
+            "deviceCategory": "mobile",
+            "channel": "Social",
+            "activitySummary": {
+                "PAGEVIEW": "1"
+            },
+            "activities": [{
+                "time": "9:20 午後",
+                "type": "PAGEVIEW",
+                "repeatActivityTimes": [],
+                "details": [{
+                    "ページのタイトル": ["SearchDrive"],
+                    "ページの URL": ["/"]
+                }],
+                "pageTitle": "SearchDrive"
+            }]
+        }, {
+            "duration": "00 分 00 秒",
+            "deviceCategory": "mobile",
+            "channel": "Social",
+            "activitySummary": {
+                "PAGEVIEW": "1"
+            },
+            "activities": [{
+                "time": "7:20 午後",
+                "type": "PAGEVIEW",
+                "repeatActivityTimes": [],
+                "details": [{
+                    "ページのタイトル": ["SearchDrive"],
+                    "ページの URL": ["/"]
+                }],
+                "pageTitle": "SearchDrive"
+            }]
+        }, {
+            "duration": "00 分 00 秒",
+            "deviceCategory": "mobile",
+            "channel": "Social",
+            "activitySummary": {
+                "PAGEVIEW": "1"
+            },
+            "activities": [{
+                "time": "3:21 午後",
+                "type": "PAGEVIEW",
+                "repeatActivityTimes": [],
+                "details": [{
+                    "ページのタイトル": ["SearchDrive"],
+                    "ページの URL": ["/"]
+                }],
+                "pageTitle": "SearchDrive"
+            }]
+        }, {
+            "duration": "00 分 00 秒",
+            "deviceCategory": "mobile",
+            "channel": "Social",
+            "activitySummary": {
+                "PAGEVIEW": "1"
+            },
+            "activities": [{
+                "time": "10:52 午前",
+                "type": "PAGEVIEW",
+                "repeatActivityTimes": [],
+                "details": [{
+                    "ページのタイトル": ["SearchDrive"],
+                    "ページの URL": ["/"]
+                }],
+                "pageTitle": "SearchDrive"
+            }]
+        }, {
+            "duration": "00 分 00 秒",
+            "deviceCategory": "mobile",
+            "channel": "Social",
+            "activitySummary": {
+                "PAGEVIEW": "1"
+            },
+            "activities": [{
+                "time": "10:12 午前",
+                "type": "PAGEVIEW",
+                "repeatActivityTimes": [],
+                "details": [{
+                    "ページのタイトル": ["SearchDrive"],
+                    "ページの URL": ["/"]
+                }],
+                "pageTitle": "SearchDrive"
+            }]
+        }, {
+            "duration": "00 分 00 秒",
+            "deviceCategory": "mobile",
+            "channel": "Social",
+            "activitySummary": {
+                "PAGEVIEW": "1"
+            },
+            "activities": [{
+                "time": "9:36 午前",
+                "type": "PAGEVIEW",
+                "repeatActivityTimes": [],
+                "details": [{
+                    "ページのタイトル": ["SearchDrive"],
+                    "ページの URL": ["/"]
+                }],
+                "pageTitle": "SearchDrive"
+            }]
+        }, {
+            "duration": "00 分 00 秒",
+            "deviceCategory": "mobile",
+            "channel": "Social",
+            "activitySummary": {
+                "PAGEVIEW": "1"
+            },
+            "activities": [{
+                "time": "8:00 午前",
+                "type": "PAGEVIEW",
+                "repeatActivityTimes": [],
+                "details": [{
+                    "ページのタイトル": ["SearchDrive"],
+                    "ページの URL": ["/"]
+                }],
+                "pageTitle": "SearchDrive"
+            }]
+        }]
+    }, {
+        "date": "1 21, 2020",
+        "hasGoal": false,
+        "hasRevenue": false,
+        "sessionCount": 9,
+        "sessions": [{
+            "duration": "00 分 00 秒",
+            "deviceCategory": "mobile",
+            "channel": "Social",
+            "activitySummary": {
+                "PAGEVIEW": "1"
+            },
+            "activities": [{
+                "time": "9:45 午後",
+                "type": "PAGEVIEW",
+                "repeatActivityTimes": [],
+                "details": [{
+                    "ページのタイトル": ["SearchDrive"],
+                    "ページの URL": ["/"]
+                }],
+                "pageTitle": "SearchDrive"
+            }]
+        }, {
+            "duration": "00 分 00 秒",
+            "deviceCategory": "mobile",
+            "channel": "Social",
+            "activitySummary": {
+                "PAGEVIEW": "1"
+            },
+            "activities": [{
+                "time": "5:17 午後",
+                "type": "PAGEVIEW",
+                "repeatActivityTimes": [],
+                "details": [{
+                    "ページのタイトル": ["SearchDrive"],
+                    "ページの URL": ["/"]
+                }],
+                "pageTitle": "SearchDrive"
+            }]
+        }, {
+            "duration": "02 分 42 秒",
+            "deviceCategory": "mobile",
+            "channel": "Social",
+            "activitySummary": {
+                "PAGEVIEW": "2"
+            },
+            "activities": [{
+                "time": "4:38 午後",
+                "type": "PAGEVIEW",
+                "repeatActivityTimes": [],
+                "details": [{
+                    "ページのタイトル": ["SearchDrive"],
+                    "ページの URL": ["/"]
+                }],
+                "pageTitle": "SearchDrive"
+            }, {
+                "time": "4:35 午後",
+                "type": "PAGEVIEW",
+                "repeatActivityTimes": [],
+                "details": [{
+                    "ページのタイトル": ["SearchDrive"],
+                    "ページの URL": ["/"]
+                }],
+                "pageTitle": "SearchDrive"
+            }]
+        }, {
+            "duration": "00 分 00 秒",
+            "deviceCategory": "mobile",
+            "channel": "Social",
+            "activitySummary": {
+                "PAGEVIEW": "1"
+            },
+            "activities": [{
+                "time": "3:09 午後",
+                "type": "PAGEVIEW",
+                "repeatActivityTimes": [],
+                "details": [{
+                    "ページのタイトル": ["SearchDrive"],
+                    "ページの URL": ["/"]
+                }],
+                "pageTitle": "SearchDrive"
+            }]
+        }, {
+            "duration": "00 分 00 秒",
+            "deviceCategory": "mobile",
+            "channel": "Social",
+            "activitySummary": {
+                "PAGEVIEW": "1"
+            },
+            "activities": [{
+                "time": "2:30 午後",
+                "type": "PAGEVIEW",
+                "repeatActivityTimes": [],
+                "details": [{
+                    "ページのタイトル": ["SearchDrive"],
+                    "ページの URL": ["/"]
+                }],
+                "pageTitle": "SearchDrive"
+            }]
+        }, {
+            "duration": "00 分 00 秒",
+            "deviceCategory": "mobile",
+            "channel": "Social",
+            "activitySummary": {
+                "PAGEVIEW": "1"
+            },
+            "activities": [{
+                "time": "12:41 午後",
+                "type": "PAGEVIEW",
+                "repeatActivityTimes": [],
+                "details": [{
+                    "ページのタイトル": ["SearchDrive"],
+                    "ページの URL": ["/"]
+                }],
+                "pageTitle": "SearchDrive"
+            }]
+        }, {
+            "duration": "00 分 00 秒",
+            "deviceCategory": "mobile",
+            "channel": "Social",
+            "activitySummary": {
+                "PAGEVIEW": "1"
+            },
+            "activities": [{
+                "time": "12:05 午後",
+                "type": "PAGEVIEW",
+                "repeatActivityTimes": [],
+                "details": [{
+                    "ページのタイトル": ["SearchDrive"],
+                    "ページの URL": ["/"]
+                }],
+                "pageTitle": "SearchDrive"
+            }]
+        }, {
+            "duration": "00 分 00 秒",
+            "deviceCategory": "mobile",
+            "channel": "Social",
+            "activitySummary": {
+                "PAGEVIEW": "1"
+            },
+            "activities": [{
+                "time": "11:21 午前",
+                "type": "PAGEVIEW",
+                "repeatActivityTimes": [],
+                "details": [{
+                    "ページのタイトル": ["SearchDrive"],
+                    "ページの URL": ["/"]
+                }],
+                "pageTitle": "SearchDrive"
+            }]
+        }, {
+            "duration": "00 分 00 秒",
+            "deviceCategory": "mobile",
+            "channel": "Social",
+            "activitySummary": {
+                "PAGEVIEW": "1"
+            },
+            "activities": [{
+                "time": "9:22 午前",
+                "type": "PAGEVIEW",
+                "repeatActivityTimes": [],
+                "details": [{
+                    "ページのタイトル": ["SearchDrive"],
+                    "ページの URL": ["/"]
+                }],
+                "pageTitle": "SearchDrive"
+            }]
+        }]
+    }, {
+        "date": "1 20, 2020",
+        "hasGoal": false,
+        "hasRevenue": false,
+        "sessionCount": 2,
+        "sessions": [{
+            "duration": "00 分 00 秒",
+            "deviceCategory": "mobile",
+            "channel": "Social",
+            "activitySummary": {
+                "PAGEVIEW": "1"
+            },
+            "activities": [{
+                "time": "10:06 午前",
+                "type": "PAGEVIEW",
+                "repeatActivityTimes": [],
+                "details": [{
+                    "ページのタイトル": ["SearchDrive"],
+                    "ページの URL": ["/"]
+                }],
+                "pageTitle": "SearchDrive"
+            }]
+        }, {
+            "duration": "00 分 00 秒",
+            "deviceCategory": "mobile",
+            "channel": "Social",
+            "activitySummary": {
+                "PAGEVIEW": "1"
+            },
+            "activities": [{
+                "time": "7:31 午前",
+                "type": "PAGEVIEW",
+                "repeatActivityTimes": [],
+                "details": [{
+                    "ページのタイトル": ["SearchDrive"],
+                    "ページの URL": ["/"]
+                }],
+                "pageTitle": "SearchDrive"
+            }]
+        }]
+    }, {
+        "date": "1 19, 2020",
+        "hasGoal": false,
+        "hasRevenue": false,
+        "sessionCount": 1,
+        "sessions": [{
+            "duration": "00 分 00 秒",
+            "deviceCategory": "mobile",
+            "channel": "Social",
+            "activitySummary": {
+                "PAGEVIEW": "1"
+            },
+            "activities": [{
+                "time": "7:58 午後",
+                "type": "PAGEVIEW",
+                "repeatActivityTimes": [],
+                "details": [{
+                    "ページのタイトル": ["SearchDrive"],
+                    "ページの URL": ["/"]
+                }],
+                "pageTitle": "SearchDrive"
+            }]
+        }]
+    }]
+}
