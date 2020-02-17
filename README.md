@@ -2,7 +2,7 @@
 
 過去問検索エンジン
 
-<img src="https://static.face9363.net/static/img/icons/searchdrive.svg" alt="logo" width="200"/>
+<img src="https://static.face9363.net/static/img/icons/searchdrive_black.svg" alt="logo" width="200"/>
 
 大学の過去問を検索できる検索エンジンです。
 
