@@ -1,21 +1,24 @@
 version: "3"
 services:
   share_dive:
-    networks:
-      - home
-      - default
     image: node:12
     command: >
       bash -c "
         npm install &&
         npm run run
       "
-    restart:
+    networks:
+      - home
+      - default
+    restart: always
     environment:
       TZ: Asia/Tokyo
       PORT: 8080
+    working_dir:
+      /share_drive
     volumes:
     - .:/share_drive
 
 networks:
   home:
+    external: true
