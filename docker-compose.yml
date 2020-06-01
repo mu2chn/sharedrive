@@ -1,6 +1,6 @@
 version: "3"
 services:
-  sharedive:
+  sharedrive:
     build: .
     command: >
       bash -c "
