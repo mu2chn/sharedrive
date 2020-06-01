@@ -1,11 +1,10 @@
 version: "3"
 services:
   share_dive:
-    image: node:12
+    build: .
     command: >
       bash -c "
-        npm install &&
-        npm run run
+        npm run start
       "
     networks:
       - home
@@ -13,11 +12,11 @@ services:
     restart: always
     environment:
       TZ: Asia/Tokyo
-      PORT: 8080
-    working_dir:
-      /share_drive
+      PORT: 8010
     volumes:
     - .:/share_drive
+    ports:
+    - "8070:8010"
 
 networks:
   home:
