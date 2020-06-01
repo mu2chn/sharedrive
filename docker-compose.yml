@@ -4,6 +4,7 @@ services:
     build: .
     command: >
       bash -c "
+        npm i &&
         npm run start
       "
     networks:
@@ -12,11 +13,9 @@ services:
     restart: always
     environment:
       TZ: Asia/Tokyo
-      PORT: 8010
+      PORT: 5000
     volumes:
     - .:/share_drive
-    ports:
-    - "8070:8010"
 
 networks:
   home:
