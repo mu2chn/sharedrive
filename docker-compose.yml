@@ -1,6 +1,6 @@
 version: "3"
 services:
-  share_dive:
+  sharedive:
     build: .
     command: >
       bash -c "
