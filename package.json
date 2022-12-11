@@ -15,7 +15,7 @@
     "body-parser": "^1.19.0",
     "chromy": "^0.5.11",
     "ejs": "^3.0.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "kuromoji": "^0.1.2",
     "mongodb": "^3.5.0",
     "node-fetch": "^2.6.0"
